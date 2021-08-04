@@ -1,0 +1,6 @@
+server:
+  port: 8097
+
+spring:
+  profiles:
+    include: db
