@@ -15,7 +15,7 @@ public class EurekaConsumerDemoApplication {
     public static void main(String[] args) {
         args = new String[]{"hh", "a=1", "-name=9", "--option=sadj", "-o"};
 
-        System.setProperty("spring.cloud.bootstrap.enabled","false");
+//        System.setProperty("spring.cloud.bootstrap.enabled","false");
         Properties properties = System.getProperties();
         SpringApplication.run(EurekaConsumerDemoApplication.class, args);
     }

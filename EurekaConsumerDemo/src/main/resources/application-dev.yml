@@ -1,0 +1,4 @@
+bleu:
+  a:1
+spring:
+  profiles: dev

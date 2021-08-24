@@ -1,6 +1,8 @@
 spring:
   application:
     name: customerService
+  profiles:
+    active: dev
 server:
   port: ${app_port}
 eureka:
