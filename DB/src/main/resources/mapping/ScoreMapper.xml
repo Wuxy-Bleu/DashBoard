@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="icu.bleuweb.db.mapper.ScoreMapper">
+
+    <resultMap id="scoreVo" type="icu.bleuweb.db.vo.ScoreVo">
+        <result column="CNO" jdbcType="VARCHAR" property="cno"/>
+        <result column="SNO" jdbcType="VARCHAR" property="sno"/>
+        <result column="DEGREE" jdbcType="DECIMAL" property="degree"/>
+    </resultMap>
+
+    <select id="test" resultType="string">
+        select count(*)
+        from score;
+    </select>
+
+    <select id="getOne" resultMap="scoreVo">
+        select *
+        from score
+            where cno = #{cno}
+        limit 1;
+    </select>
+</mapper>
